@@ -1,0 +1,9 @@
+a0=159.3;
+b2=1.0;b1=13.83;b0=47.77;
+SYS_G=tf(a0,[b2,b1,b0]);
+y=lsim(SYS_G,input,t);
+teta=1.0;
+d=b2/a0/teta
+p=b1/a0/teta
+i=b0/a0/teta
+PID=pid(p,i,d);
